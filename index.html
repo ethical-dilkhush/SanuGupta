@@ -1,0 +1,47 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function SanuGuptaPortfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-r from-purple-300 to-blue-200 p-6">
+      <header className="text-center mb-12">
+        <motion.h1 className="text-5xl font-bold mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>Sanu Gupta</motion.h1>
+        <motion.p className="text-lg text-gray-700" initial={{ opacity: 0 }} animate={{ opacity: 1, delay: 0.2 }}>Web Developer | Designer | Tech Enthusiast</motion.p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card className="hover:scale-105 transition-transform">
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-2">About Me</h2>
+            <p className="text-gray-600">I'm Sanu Gupta, a passionate web developer skilled in creating engaging and responsive websites. I love turning ideas into reality through code and design.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="hover:scale-105 transition-transform">
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-2">Projects</h2>
+            <ul className="list-disc list-inside text-gray-600">
+              <li>Portfolio Website</li>
+              <li>E-commerce Platform</li>
+              <li>Blog CMS</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="hover:scale-105 transition-transform">
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-2">Contact</h2>
+            <p className="text-gray-600 mb-4">Feel free to reach out for collaborations or just a friendly hello!</p>
+            <Button variant="default">Get in Touch</Button>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center mt-12 text-gray-500">
+        © 2025 Sanu Gupta. All rights reserved.
+      </footer>
+    </div>
+  );
+}
